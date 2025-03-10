@@ -1,0 +1,5 @@
+crewai[tools]
+tavily-python
+langchain
+google-generativeai
+python-dotenv

@@ -19,7 +19,7 @@ researcher = Agent(
     backstory="You find helpful information online",
     tools=[search_tool],
     llm=gemini,
-    verbose=True
+    verbose=False
 )
 
 planner = Agent(
@@ -28,7 +28,7 @@ planner = Agent(
     backstory="You create easy-to-follow content plans",
     tools=[search_tool],
     llm=gemini,
-    verbose=True
+    verbose=False
 )
 
 writer = Agent(
@@ -36,5 +36,5 @@ writer = Agent(
     goal="Create engaging content",
     backstory="You write content people enjoy reading",
     llm=gemini,
-    verbose=True
+    verbose=False
 ) 

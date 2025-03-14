@@ -16,14 +16,13 @@ An advanced AI-powered content generation platform that researches, plans, and c
 - Streamlit
 - CrewAI
 - LangChain
-- Tavily API
-- Google Gemini API
+- Tavily 
+- Google Gemini 
 
 ## ⚙️ Installation
 
 ### Prerequisites
 
-- Python 3.9+
 - API keys for Google (Gemini) and Tavily
 
 ### Setup
@@ -75,13 +74,12 @@ An advanced AI-powered content generation platform that researches, plans, and c
 
 3. **Click "Generate Content"**
 
-4. **Download or copy your generated content**
 
 ## 🧠 AI Agents
 
 ContentPilot AI uses three specialized AI agents:
 
-- **🔍 Researcher Agent**: Finds trends, audience interests, and useful facts about your topics
+- **🔍 Researcher Agent**: Finds trends from web, audience interests, and useful facts about your topics
 - **📋 Planner Agent**: Creates a structured content plan based on research findings
 - **📝 Writer Agent**: Transforms the research and plan into polished, ready-to-use content
 
@@ -91,4 +89,4 @@ ContentPilot AI uses three specialized AI agents:
 
 ## 👨‍💻 Authors
 
-## Made with ❤️ by  [Yash Gondaliya](https://www.github.com/YashGondaliya36)  
+## Made with ❤️ by  [Yash Gondaliya](https://www.linkedin.com/in/yash-gondaliya-02427a260/)  

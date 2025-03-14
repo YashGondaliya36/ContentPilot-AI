@@ -9,7 +9,7 @@ load_dotenv()
 gemini = LLM(
     model="gemini/gemini-2.0-flash",
     api_key=os.getenv('GOOGLE_API_KEY'),
-    max_tokens=4096
+    max_tokens=8192
 )
 
 # Define agents

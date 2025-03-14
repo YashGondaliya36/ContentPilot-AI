@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     
     if "content_result" in st.session_state:
-        st.header("Generated Content ✨",divider='rainbow')
+        st.subheader("Generated Content ✨",divider='rainbow')
         
         st.markdown(st.session_state.content_result)
         st.markdown('</div>', unsafe_allow_html=True)

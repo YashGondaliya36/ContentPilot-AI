@@ -19,6 +19,7 @@ An advanced AI-powered content generation platform that researches, plans, and c
 - Tavily 
 - Google Gemini 
 
+
 ## ⚙️ Installation
 
 ### Prerequisites

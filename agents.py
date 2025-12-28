@@ -7,15 +7,15 @@ load_dotenv()
 
 # Initialize 
 gemini = LLM(
-    model="gemini/gemini-2.0-flash",
+    model="gemini/gemini-2.5-flash",
     api_key=os.getenv('GOOGLE_API_KEY'),
-    max_tokens=8192
+    max_tokens=4096
 )
 
 # Define agents
 researcher = Agent(
     role="Researcher",
-    goal="Find useful information",
+    goal="Find useful Social media Content ",
     backstory="You find helpful information online",
     tools=[search_tool],
     llm=gemini,

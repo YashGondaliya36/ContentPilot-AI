@@ -267,10 +267,6 @@ if __name__ == "__main__":
             help="Add any other special instructions"
         )
         
-
-
-
-
     generate_clicked = st.button("🚀 Generate Content ", key="hidden_generate", help="Generate content based on your inputs")
 
     

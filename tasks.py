@@ -46,7 +46,9 @@ writing_task = Task(
     4. Include helpful examples and tips
     
     Additional notes: {additional_notes}
+
     """,
     agent=writer,
     expected_output="Complete content examples ready to use"
 ) 
+

@@ -37,6 +37,18 @@ class ContentGenerationResponse(BaseModel):
         example=["Eco-Friendly Travel"]
     )
     
+    email_sent: Optional[bool] = Field(
+        None,
+        description="Whether email was sent (if auto-send was requested)",
+        example=True
+    )
+    
+    email_status: Optional[str] = Field(
+        None,
+        description="Email send status message (if applicable)",
+        example="Content successfully sent to client@example.com"
+    )
+    
     class Config:
         json_schema_extra = {
             "example": {
@@ -84,6 +96,39 @@ class ErrorResponse(BaseModel):
                 "error": "Validation Error",
                 "detail": "content_topics field is required",
                 "timestamp": "2025-12-28T16:45:00"
+            }
+        }
+
+
+class EmailSendResponse(BaseModel):
+    """
+    Response model for email sending
+    """
+    
+    status: str = Field(
+        ...,
+        description="Status of the email send operation",
+        example="success"
+    )
+    
+    message: str = Field(
+        ...,
+        description="Result message",
+        example="Content successfully sent to user@example.com"
+    )
+    
+    timestamp: str = Field(
+        ...,
+        description="Timestamp when email was sent (ISO 8601)",
+        example="2025-12-29T21:30:00"
+    )
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "status": "success",
+                "message": "Content successfully sent to user@example.com",
+                "timestamp": "2025-12-29T21:30:00"
             }
         }
 

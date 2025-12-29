@@ -137,6 +137,12 @@ env.bak/
 venv.bak/
 CTAI/
 
+# Gmail API Credentials (NEVER COMMIT THESE!)
+credentials.json
+token.json
+backend/credentials.json
+backend/token.json
+
 # Spyder project settings
 .spyderproject
 .spyproject

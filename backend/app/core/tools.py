@@ -3,7 +3,7 @@ AI Tools Configuration
 Search and other tools used by AI agents
 """
 
-from langchain.tools import Tool
+from langchain_core.tools import Tool
 from tavily import TavilyClient
 from app.config import settings
 from app.utils.logger import setup_logger

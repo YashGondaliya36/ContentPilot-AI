@@ -57,6 +57,47 @@ class ContentService:
             
             logger.info(f"Content generation successful for topics: {', '.join(topics)}")
             
+            # Check if auto-send email is requested
+            send_email = request_data.get('send_email', False)
+            if send_email:
+                recipient_email = request_data.get('recipient_email')
+                
+                if recipient_email:
+                    logger.info(f"Auto-send email requested to: {recipient_email}")
+                    
+                    # Import email service here to avoid circular imports
+                    from app.services.email_service import email_service
+                    
+                    # Generate email subject if not provided
+                    email_subject = request_data.get('email_subject')
+                    if not email_subject:
+                        topics_str = ', '.join(topics[:2])  # First 2 topics
+                        if len(topics) > 2:
+                            topics_str += f" and {len(topics) - 2} more"
+                        email_subject = f"Your AI-Generated Content: {topics_str}"
+                    
+                    # Send email
+                    email_result = email_service.send_content_email(
+                        to=recipient_email,
+                        subject=email_subject,
+                        content=formatted_result['content'],
+                        topics=topics,
+                        content_types=request_data.get('content_types', 'Content')
+                    )
+                    
+                    # Add email status to result
+                    formatted_result['email_sent'] = email_result['status'] == 'success'
+                    formatted_result['email_status'] = email_result['message']
+                    
+                    if email_result['status'] == 'success':
+                        logger.info(f"Email sent successfully to {recipient_email}")
+                    else:
+                        logger.warning(f"Email sending failed: {email_result['message']}")
+                else:
+                    logger.warning("send_email is True but recipient_email is missing")
+                    formatted_result['email_sent'] = False
+                    formatted_result['email_status'] = "Email sending failed: recipient_email is required"
+            
             return formatted_result
             
         except ValueError as ve:

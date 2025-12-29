@@ -1,0 +1,29 @@
+# ContentPilot AI Backend Requirements
+
+# Core Framework
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Pydantic for data validation
+pydantic
+pydantic-settings
+
+# AI & ML
+crewai
+tavily-python
+langchain
+langchain-community
+
+# HTTP Client
+httpx
+
+# Email & Gmail API
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+markdown2
+
+# Additional utilities
+python-multipart

@@ -1,5 +1,0 @@
-crewai==0.102.0
-tavily-python
-langchain
-python-dotenv
-streamlit

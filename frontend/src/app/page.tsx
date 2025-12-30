@@ -49,12 +49,8 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </Link>
-              <Link href="/features" className="w-full sm:w-auto max-w-xs">
-                <button className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full">
-                  See How It Works
-                </button>
-              </Link>
             </div>
+
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-12 pt-12 sm:pt-16 md:pt-20 max-w-3xl mx-auto w-full px-4">

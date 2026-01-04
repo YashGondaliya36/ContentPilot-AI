@@ -10,7 +10,7 @@ pydantic
 pydantic-settings
 
 # AI & ML
-crewai
+crewai[google-genai]
 tavily-python
 langchain
 langchain-community

@@ -239,20 +239,6 @@ Content-Type: application/json
 - API rate limiting
 - Input validation with Pydantic
 
-## 🚀 Deployment
-
-### Backend (Railway/Render/Fly.io)
-```bash
-# Set environment variables
-# Deploy from backend folder
-```
-
-### Frontend (Vercel/Netlify)
-```bash
-# Set NEXT_PUBLIC_API_URL
-# Deploy from frontend folder
-```
-
 ## 📝 License
 
 [MIT](https://choosealicense.com/licenses/mit/)

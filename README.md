@@ -67,15 +67,8 @@ TAVILY_API_KEY=your_key_here
 GMAIL_CREDENTIALS_PATH=credentials.json
 ```
 
-### 2️⃣ Automatic Setup (Recommended)
-We've included a helper script to set up the Python environment, install dependencies, and run the backend automatically.
 
-**In PowerShell:**
-```powershell
-./run_backend.ps1
-```
-
-### 3️⃣ Run Frontend
+### 2️⃣ Run Frontend
 Open a new terminal for the frontend:
 ```bash
 cd frontend
@@ -83,7 +76,7 @@ npm install
 npm run dev
 ```
 
-### 4️⃣ Use the App
+### 3️⃣ Use the App
 Visit `http://localhost:3000` in your browser.
 
 ---
